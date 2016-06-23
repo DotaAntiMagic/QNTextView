@@ -48,6 +48,16 @@
                ReferencedContainer = "container:MytextView.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDFA77681D1B8D4F007E3167"
+               BuildableName = "QNTextViewTests.xctest"
+               BlueprintName = "QNTextViewTests"
+               ReferencedContainer = "container:MytextView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

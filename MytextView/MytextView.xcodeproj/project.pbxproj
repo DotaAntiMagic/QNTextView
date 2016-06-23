@@ -14,7 +14,12 @@
 		FD1070171D1A2D8900DD1B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD1070151D1A2D8900DD1B04 /* LaunchScreen.storyboard */; };
 		FD1070221D1A2D8900DD1B04 /* MytextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1070211D1A2D8900DD1B04 /* MytextViewTests.swift */; };
 		FD10702D1D1A2D8900DD1B04 /* MytextViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10702C1D1A2D8900DD1B04 /* MytextViewUITests.swift */; };
-		FD10703B1D1A310000DD1B04 /* QNTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10703A1D1A310000DD1B04 /* QNTextView.swift */; };
+		FDFA77631D1B8D4F007E3167 /* QNTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = FDFA77621D1B8D4F007E3167 /* QNTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDFA776A1D1B8D4F007E3167 /* QNTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA77601D1B8D4F007E3167 /* QNTextView.framework */; };
+		FDFA77711D1B8D4F007E3167 /* QNTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA77701D1B8D4F007E3167 /* QNTextViewTests.swift */; };
+		FDFA77751D1B8D4F007E3167 /* QNTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA77601D1B8D4F007E3167 /* QNTextView.framework */; };
+		FDFA77761D1B8D4F007E3167 /* QNTextView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA77601D1B8D4F007E3167 /* QNTextView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDFA777F1D1B8D84007E3167 /* QNTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA777E1D1B8D84007E3167 /* QNTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +37,42 @@
 			remoteGlobalIDString = FD1070081D1A2D8900DD1B04;
 			remoteInfo = MytextView;
 		};
+		FDFA776B1D1B8D4F007E3167 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD1070011D1A2D8900DD1B04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDFA775F1D1B8D4F007E3167;
+			remoteInfo = QNTextView;
+		};
+		FDFA776D1D1B8D4F007E3167 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD1070011D1A2D8900DD1B04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1070081D1A2D8900DD1B04;
+			remoteInfo = MytextView;
+		};
+		FDFA77731D1B8D4F007E3167 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD1070011D1A2D8900DD1B04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDFA775F1D1B8D4F007E3167;
+			remoteInfo = QNTextView;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDFA777C1D1B8D4F007E3167 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FDFA77761D1B8D4F007E3167 /* QNTextView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD1070091D1A2D8900DD1B04 /* MytextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MytextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +88,13 @@
 		FD1070281D1A2D8900DD1B04 /* MytextViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MytextViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD10702C1D1A2D8900DD1B04 /* MytextViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MytextViewUITests.swift; sourceTree = "<group>"; };
 		FD10702E1D1A2D8900DD1B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD10703A1D1A310000DD1B04 /* QNTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QNTextView.swift; sourceTree = "<group>"; };
+		FDFA77601D1B8D4F007E3167 /* QNTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QNTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFA77621D1B8D4F007E3167 /* QNTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNTextView.h; sourceTree = "<group>"; };
+		FDFA77641D1B8D4F007E3167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFA77691D1B8D4F007E3167 /* QNTextViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QNTextViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFA77701D1B8D4F007E3167 /* QNTextViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QNTextViewTests.swift; sourceTree = "<group>"; };
+		FDFA77721D1B8D4F007E3167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFA777E1D1B8D84007E3167 /* QNTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QNTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFA77751D1B8D4F007E3167 /* QNTextView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +120,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDFA775C1D1B8D4F007E3167 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFA77661D1B8D4F007E3167 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFA776A1D1B8D4F007E3167 /* QNTextView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +144,8 @@
 				FD10700B1D1A2D8900DD1B04 /* MytextView */,
 				FD1070201D1A2D8900DD1B04 /* MytextViewTests */,
 				FD10702B1D1A2D8900DD1B04 /* MytextViewUITests */,
+				FDFA77611D1B8D4F007E3167 /* QNTextView */,
+				FDFA776F1D1B8D4F007E3167 /* QNTextViewTests */,
 				FD10700A1D1A2D8900DD1B04 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +156,8 @@
 				FD1070091D1A2D8900DD1B04 /* MytextView.app */,
 				FD10701D1D1A2D8900DD1B04 /* MytextViewTests.xctest */,
 				FD1070281D1A2D8900DD1B04 /* MytextViewUITests.xctest */,
+				FDFA77601D1B8D4F007E3167 /* QNTextView.framework */,
+				FDFA77691D1B8D4F007E3167 /* QNTextViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,7 +167,6 @@
 			children = (
 				FD10700C1D1A2D8900DD1B04 /* AppDelegate.swift */,
 				FD10700E1D1A2D8900DD1B04 /* ViewController.swift */,
-				FD10703A1D1A310000DD1B04 /* QNTextView.swift */,
 				FD1070101D1A2D8900DD1B04 /* Main.storyboard */,
 				FD1070131D1A2D8900DD1B04 /* Assets.xcassets */,
 				FD1070151D1A2D8900DD1B04 /* LaunchScreen.storyboard */,
@@ -128,7 +193,37 @@
 			path = MytextViewUITests;
 			sourceTree = "<group>";
 		};
+		FDFA77611D1B8D4F007E3167 /* QNTextView */ = {
+			isa = PBXGroup;
+			children = (
+				FDFA777E1D1B8D84007E3167 /* QNTextView.swift */,
+				FDFA77621D1B8D4F007E3167 /* QNTextView.h */,
+				FDFA77641D1B8D4F007E3167 /* Info.plist */,
+			);
+			path = QNTextView;
+			sourceTree = "<group>";
+		};
+		FDFA776F1D1B8D4F007E3167 /* QNTextViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDFA77701D1B8D4F007E3167 /* QNTextViewTests.swift */,
+				FDFA77721D1B8D4F007E3167 /* Info.plist */,
+			);
+			path = QNTextViewTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FDFA775D1D1B8D4F007E3167 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFA77631D1B8D4F007E3167 /* QNTextView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		FD1070081D1A2D8900DD1B04 /* MytextView */ = {
@@ -138,10 +233,12 @@
 				FD1070051D1A2D8900DD1B04 /* Sources */,
 				FD1070061D1A2D8900DD1B04 /* Frameworks */,
 				FD1070071D1A2D8900DD1B04 /* Resources */,
+				FDFA777C1D1B8D4F007E3167 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FDFA77741D1B8D4F007E3167 /* PBXTargetDependency */,
 			);
 			name = MytextView;
 			productName = MytextView;
@@ -184,6 +281,43 @@
 			productReference = FD1070281D1A2D8900DD1B04 /* MytextViewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FDFA775F1D1B8D4F007E3167 /* QNTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDFA777B1D1B8D4F007E3167 /* Build configuration list for PBXNativeTarget "QNTextView" */;
+			buildPhases = (
+				FDFA775B1D1B8D4F007E3167 /* Sources */,
+				FDFA775C1D1B8D4F007E3167 /* Frameworks */,
+				FDFA775D1D1B8D4F007E3167 /* Headers */,
+				FDFA775E1D1B8D4F007E3167 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QNTextView;
+			productName = QNTextView;
+			productReference = FDFA77601D1B8D4F007E3167 /* QNTextView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDFA77681D1B8D4F007E3167 /* QNTextViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDFA777D1D1B8D4F007E3167 /* Build configuration list for PBXNativeTarget "QNTextViewTests" */;
+			buildPhases = (
+				FDFA77651D1B8D4F007E3167 /* Sources */,
+				FDFA77661D1B8D4F007E3167 /* Frameworks */,
+				FDFA77671D1B8D4F007E3167 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDFA776C1D1B8D4F007E3167 /* PBXTargetDependency */,
+				FDFA776E1D1B8D4F007E3167 /* PBXTargetDependency */,
+			);
+			name = QNTextViewTests;
+			productName = QNTextViewTests;
+			productReference = FDFA77691D1B8D4F007E3167 /* QNTextViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +339,13 @@
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = FD1070081D1A2D8900DD1B04;
 					};
+					FDFA775F1D1B8D4F007E3167 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FDFA77681D1B8D4F007E3167 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FD1070081D1A2D8900DD1B04;
+					};
 				};
 			};
 			buildConfigurationList = FD1070041D1A2D8900DD1B04 /* Build configuration list for PBXProject "MytextView" */;
@@ -223,6 +364,8 @@
 				FD1070081D1A2D8900DD1B04 /* MytextView */,
 				FD10701C1D1A2D8900DD1B04 /* MytextViewTests */,
 				FD1070271D1A2D8900DD1B04 /* MytextViewUITests */,
+				FDFA775F1D1B8D4F007E3167 /* QNTextView */,
+				FDFA77681D1B8D4F007E3167 /* QNTextViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +395,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDFA775E1D1B8D4F007E3167 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFA77671D1B8D4F007E3167 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,7 +416,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD10703B1D1A310000DD1B04 /* QNTextView.swift in Sources */,
 				FD10700F1D1A2D8900DD1B04 /* ViewController.swift in Sources */,
 				FD10700D1D1A2D8900DD1B04 /* AppDelegate.swift in Sources */,
 			);
@@ -281,6 +437,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDFA775B1D1B8D4F007E3167 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFA777F1D1B8D84007E3167 /* QNTextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFA77651D1B8D4F007E3167 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFA77711D1B8D4F007E3167 /* QNTextViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +465,21 @@
 			isa = PBXTargetDependency;
 			target = FD1070081D1A2D8900DD1B04 /* MytextView */;
 			targetProxy = FD1070291D1A2D8900DD1B04 /* PBXContainerItemProxy */;
+		};
+		FDFA776C1D1B8D4F007E3167 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDFA775F1D1B8D4F007E3167 /* QNTextView */;
+			targetProxy = FDFA776B1D1B8D4F007E3167 /* PBXContainerItemProxy */;
+		};
+		FDFA776E1D1B8D4F007E3167 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1070081D1A2D8900DD1B04 /* MytextView */;
+			targetProxy = FDFA776D1D1B8D4F007E3167 /* PBXContainerItemProxy */;
+		};
+		FDFA77741D1B8D4F007E3167 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDFA775F1D1B8D4F007E3167 /* QNTextView */;
+			targetProxy = FDFA77731D1B8D4F007E3167 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -403,7 +590,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = MytextView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qining.MytextView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,7 +603,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = MytextView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qining.MytextView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,6 +658,73 @@
 			};
 			name = Release;
 		};
+		FDFA77771D1B8D4F007E3167 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = QNTextView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = qining.QNTextView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDFA77781D1B8D4F007E3167 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = QNTextView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = qining.QNTextView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDFA77791D1B8D4F007E3167 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QNTextViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = qining.QNTextViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MytextView.app/MytextView";
+			};
+			name = Debug;
+		};
+		FDFA777A1D1B8D4F007E3167 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QNTextViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = qining.QNTextViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MytextView.app/MytextView";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +744,7 @@
 				FD1070331D1A2D8900DD1B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD1070341D1A2D8900DD1B04 /* Build configuration list for PBXNativeTarget "MytextViewTests" */ = {
 			isa = XCConfigurationList;
@@ -494,12 +753,30 @@
 				FD1070361D1A2D8900DD1B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD1070371D1A2D8900DD1B04 /* Build configuration list for PBXNativeTarget "MytextViewUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD1070381D1A2D8900DD1B04 /* Debug */,
 				FD1070391D1A2D8900DD1B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDFA777B1D1B8D4F007E3167 /* Build configuration list for PBXNativeTarget "QNTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFA77771D1B8D4F007E3167 /* Debug */,
+				FDFA77781D1B8D4F007E3167 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FDFA777D1D1B8D4F007E3167 /* Build configuration list for PBXNativeTarget "QNTextViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFA77791D1B8D4F007E3167 /* Debug */,
+				FDFA777A1D1B8D4F007E3167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

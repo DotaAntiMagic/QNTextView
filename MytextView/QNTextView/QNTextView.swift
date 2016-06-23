@@ -25,12 +25,12 @@ import UIKit
 //    }
 //}
 
- class QNTextView: UITextView,UIScrollViewDelegate {
+ public class QNTextView: UITextView,UIScrollViewDelegate {
     
-    var placeholderText:String? // placeholder文字信息
-    var placeholderColor:UIColor? // placeholder文字颜色
-    var maxInputLength:NSInteger = 0 // 最大输入文字数量
-    var showInputting:Bool? // 是否右下角显示输入提醒，默认为NO
+   public var placeholderText:String? // placeholder文字信息
+   public var placeholderColor:UIColor? // placeholder文字颜色
+   public var maxInputLength:NSInteger = 0 // 最大输入文字数量
+   public var showInputting:Bool? // 是否右下角显示输入提醒，默认为NO
     var _placeholderLabel:UILabel!
     var _inputtingLabel:UILabel!
     var oldtext: String? {  // 问题
@@ -63,7 +63,6 @@ import UIKit
         willSet(NewFont) {
         self._updatePlaceholderLabel()
         }
-        
     }
     var oldTextAlignment:NSTextAlignment? {
         willSet(newTextAlignment) {
@@ -85,11 +84,11 @@ import UIKit
 //        fatalError("init(coder:) has not been implemented")
 //    }
 //    
-    override  func awakeFromNib() {
+    override  public func awakeFromNib() {
         self._setup()
     }
     
-    override  func layoutSubviews() {
+    override  public func layoutSubviews() {
         super.layoutSubviews()
         self._configPlaceholderLabel()
         self._configInputtingLabel()
@@ -211,7 +210,7 @@ import UIKit
         _inputtingLabel.frame = CGRectMake(0, self.contentOffset.y+self.bounds.size.height-self.font!.lineHeight, self.bounds.size.width - 8, self.font!.lineHeight)
     }
     
-     func setCursorToEnd() {
+    public func setCursorToEnd() {
         let length = self.text.characters.count
         self.selectedRange = NSMakeRange(length, 0)
     }

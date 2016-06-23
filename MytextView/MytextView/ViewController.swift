@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QNTextView
 
 class ViewController: UIViewController {
 let textView = QNTextView()
@@ -18,11 +19,7 @@ let textView = QNTextView()
         textView.placeholderColor = UIColor.redColor()
         textView.maxInputLength = 110
         textView.showInputting = true
-        
-        
-    
-        self.view.addSubview(textView)
-       
+       self.view.addSubview(textView)
         
     }
 
@@ -30,7 +27,6 @@ let textView = QNTextView()
     @IBAction func Buttonaction(sender: AnyObject) {
 
         textView.setCursorToEnd()
-        
     }
 
    

@@ -1,0 +1,10 @@
+framework module QNTextView {
+  umbrella header "QNTextView.h"
+
+  export *
+  module * { export * }
+}
+
+module QNTextView.Swift {
+    header "QNTextView-Swift.h"
+}
