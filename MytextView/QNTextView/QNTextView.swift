@@ -8,93 +8,31 @@
 
 import UIKit
 
-//private extension String{
-//    func naturalTextAligment() -> NSTextAlignment{
-//        if (self.characters.count == 0){
-//            return NSTextAlignment.Natural
-//        }
-//        let tagschemes:NSArray = [NSLinguisticTagSchemeLanguage]
-//        let tagger:NSLinguisticTagger = NSLinguisticTagger.init(tagSchemes: tagschemes as! [String], options: 0)
-//        tagger.string = self
-//        let language:String = tagger.tagAtIndex(0, scheme: NSLinguisticTagSchemeLanguage, tokenRange: nil, sentenceRange: nil)!
-//        if (language.rangeOfString("he")?.startIndex != nil || language.rangeOfString("ar")?.startIndex != nil) {
-//            return NSTextAlignment.Right
-//        } else {
-//            return NSTextAlignment.Left
-//        }
-//    }
-//}
-
- public class QNTextView: UITextView,UIScrollViewDelegate {
+@IBDesignable public class QNTextView: UITextView,UIScrollViewDelegate {
     
-   public var placeholderText:String? // placeholder文字信息
-   public var placeholderColor:UIColor? // placeholder文字颜色
-   public var maxInputLength:NSInteger = 0 // 最大输入文字数量
-   public var showInputting:Bool? // 是否右下角显示输入提醒，默认为NO
-    var _placeholderLabel:UILabel!
-    var _inputtingLabel:UILabel!
-    var oldtext: String? {  // 问题
-        willSet(newText){
-            self._updatePlaceholderLabel()
-            self._updateInputtingLabel()
-        }
-    }
-    var oldShowInPutting:Bool? {
-        willSet(newShowInPutting){
-            showInputting = newShowInPutting
-            self._updateInputtingLabel()
-        }
-    }
-    var oldPlaceholder:String? {
-        willSet(newPlaceholder) {
-            if(newPlaceholder == placeholderText) {
-                return
-            }
-            placeholderText = newPlaceholder
-            self._updatePlaceholderLabel()
-        }
-    }
-    var oldContentInset:UIEdgeInsets? {
-        willSet(newContentInset){  // 问题
-            self._updatePlaceholderLabel()
-        }
-    }
-    var oldFont:UIFont? {
-        willSet(NewFont) {
-        self._updatePlaceholderLabel()
-        }
-    }
-    var oldTextAlignment:NSTextAlignment? {
-        willSet(newTextAlignment) {
-            self._updatePlaceholderLabel()
-        }
-    
-    }
+  @IBInspectable public var placeholderText:String? // placeholder文字信息
+  @IBInspectable public var placeholderColor:UIColor? // placeholder文字颜色
+  @IBInspectable public var maxInputLength:NSInteger = 0 // 最大输入文字数量
+   public var showInputting:Bool = false // 是否右下角显示输入提醒，默认为NO
+   private var _placeholderLabel:UILabel!
+   private var _inputtingLabel:UILabel!
     
     convenience init() {
         self.init(frame: CGRectZero)
-        self._setup()
+        self.setup()
     }
-//    override init(frame: CGRect){
-//        super.init(frame: frame)
-//        self._setup()
-//    }
-//    
-//    required public init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//    
+
     override  public func awakeFromNib() {
-        self._setup()
+        self.setup()
     }
     
     override  public func layoutSubviews() {
         super.layoutSubviews()
-        self._configPlaceholderLabel()
-        self._configInputtingLabel()
+        self.configPlaceholderLabel()
+        self.configInputtingLabel()
     }
     
-    func _setup()  {
+    func setup()  {
         self.font = UIFont.systemFontOfSize(13)
         self.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 20, right: 0)
         if (placeholderColor == nil) {
@@ -114,8 +52,8 @@ import UIKit
         self.addSubview(_inputtingLabel)
         self.sendSubviewToBack(_inputtingLabel)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(textChanged(_:)), name: UITextViewTextDidChangeNotification, object: nil)
-        self._updatePlaceholderLabel()
-        self._updateInputtingLabel()
+        self.updatePlaceholderLabel()
+        self.updateInputtingLabel()
         }
     
     deinit {
@@ -126,31 +64,26 @@ import UIKit
         if (self.text.characters.count >= maxInputLength) {
           self.text = (self.text as NSString).substringToIndex(maxInputLength)
         }
-        self._updateInputtingLabel()
+        self.updateInputtingLabel()
         if self.placeholderText?.characters.count == 0 {
             return
         }
-        self._updatePlaceholderLabel()
+        self.updatePlaceholderLabel()
     }
     
-    func _updateInputtingLabel()  {
+    func updateInputtingLabel()  {
         
         // 问题
-        if showInputting == nil {
-            return
-        }else {
-        _inputtingLabel.hidden = !showInputting!
-        }
+       _inputtingLabel.hidden = !showInputting
         
         if NSInteger(INT_MAX) == maxInputLength {
             return
         }
-  
         _inputtingLabel.text = "\(self.text.characters.count)/\(maxInputLength)"
       
     }
 
-    func _updatePlaceholderLabel()  {
+    func updatePlaceholderLabel()  {
         if (self.text.characters.count > 0)  {
             if(_placeholderLabel.hidden == false){
             UIView.animateWithDuration(0.1, animations: { 
@@ -160,7 +93,7 @@ import UIKit
             })
         }
         } else {
-           self._configPlaceholderLabel()
+           self.configPlaceholderLabel()
             _placeholderLabel.hidden = false
             _placeholderLabel.alpha = 0.0
             UIView.animateWithDuration(0.1, animations: { 
@@ -170,7 +103,7 @@ import UIKit
         }
     }
     
-    func _configPlaceholderLabel(){
+    func configPlaceholderLabel(){
         _placeholderLabel.lineBreakMode =  NSLineBreakMode.ByWordWrapping
         _placeholderLabel.numberOfLines = 0
         _placeholderLabel.font = self.font
@@ -179,13 +112,13 @@ import UIKit
         _placeholderLabel.text = self.placeholderText
         _placeholderLabel.textAlignment = NSTextAlignment.Left
         _placeholderLabel.sizeToFit()
-        var rect:CGRect = self._placeholderRectForBounds(self.bounds)
+        var rect:CGRect = self.placeholderRectForBounds(self.bounds)
         rect.size.height = _placeholderLabel.frame.size.height
         _placeholderLabel.frame = rect;
         
     }
     
-    func _placeholderRectForBounds(bounds:CGRect) -> CGRect {
+    func placeholderRectForBounds(bounds:CGRect) -> CGRect {
         var rect:CGRect = UIEdgeInsetsInsetRect(bounds, self.contentInset)
         if (self.respondsToSelector(Selector("textContainer"))) {
             rect = UIEdgeInsetsInsetRect(rect, self.textContainerInset)
@@ -200,7 +133,7 @@ import UIKit
         return rect
     }
     
-    func _configInputtingLabel() {
+    func configInputtingLabel() {
         _inputtingLabel.numberOfLines = 1
         _inputtingLabel.font = self.font
         _inputtingLabel.backgroundColor = UIColor.clearColor()

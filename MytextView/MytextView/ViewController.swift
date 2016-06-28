@@ -17,7 +17,7 @@ let textView = QNTextView()
         textView.frame = CGRectMake(20, 20, 300, 300)
         textView.placeholderText = "111"
         textView.placeholderColor = UIColor.redColor()
-        textView.maxInputLength = 110
+        textView.maxInputLength = 20;
         textView.showInputting = true
        self.view.addSubview(textView)
         
